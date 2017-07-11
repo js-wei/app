@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<style type="text/css">
+			html,body{
+				background-color:#FFFFFF;
+			}
+			.mui-segmented-control.mui-segmented-control-inverted {
+    			margin-top: 45px;
+			}
+			.mui-row.mui-fullscreen>[class*="mui-col-"] {
+				height: 100%;
+			}
+			
+			.mui-col-xs-3,
+			.mui-col-xs-9 {
+				overflow-y: auto;
+				height: 100%;
+			}
+			
+			.mui-segmented-control .mui-control-item {
+				
+				line-height: 50px;
+				width: 100%;
+			}
+			
+			.mui-control-content {
+				display: block;
+			}
+			
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+				background-color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<div class="mui-row header-row">
+			    <div class="mui-col-sm-2 mui-col-xs-2 header-search mui-text-left">
+			    	<span class="mui-icon mui-icon-back mui-action-back"></span>
+			    </div>
+			    <div class="mui-col-sm-8 mui-col-xs-8 header-title mui-text-left">
+			    	<h1 id="title" class="mui-title">分类</h1>
+			    </div>
+			</div>
+		</header>
+		<div class="mui-content mui-row mui-fullscreen">
+			<div class="mui-col-sm-3 mui-col-xs-3 mui-text-center categray">
+				<ul class="mui-list-unstyled margin-top10" id="navigarer">
+					<li class="active">热门推荐</li>
+					<li>男士发型</li>
+					<li>女士发型</li>
+					<li>儿童发型</li>
+				</ul>
+			</div>
+			<div class="mui-col-sm-9 mui-col-xs-9 content">
+				
+			</div>
+		</div>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/mui.min.js"></script>
+		<script src="js/categray.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var html = "<li class=\"active\">热门推荐</li>";
+				for(var i=0;i<categray.length;i++){
+					html +='<li data-role="'+categray[i].name+'">'+categray[i].title+'</li>';
+				}
+				$("#navigarer").html(html);
+			});
+		</script>
+		<script type="text/javascript">
+			mui('.content').load("categray_sub.html",function(response){});
+			mui.plusReady(function(){
+				mui.init({
+					preloadPages: [{
+				        url:"categray_sub.html",
+				        id:"categray_sub.html", 
+				    }]
+				});
+				plus.navigator.setStatusBarBackground("#F52F6C");
+				
+			});
+			$(function(){
+				$(document).on('click','a',function(e){
+					e.preventDefault();
+					id = $(this).attr('href');
+					mui.openWindow({
+						id:id,
+						url:id
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/mui.picker.css" />
+		<link href="css/mui.poppicker.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/icons-extra.css"/>
+		<link rel="stylesheet" href="css/style.css"/>
+		<style type="text/css">
+			html,body{
+				background-color: #fff;
+			}
+			.mui-search.mui-active:before {
+			    line-height:21px;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<div class="mui-row header-row">
+			    <div class="mui-col-sm-2 mui-col-xs-2 header-search mui-text-left">
+			    	<span class="mui-icon mui-icon-back mui-back"></span>
+			    </div>
+			    <div class="mui-col-sm-8 mui-col-xs-8 header-title mui-text-center">
+			    	<div class="mui-input-row mui-search">
+					    <input type="search" class="mui-input-clear" placeholder="请输入关键词/@店铺名">
+					</div>
+			    </div>
+			    <div class="mui-col-sm-2 mui-col-xs-2 header-chat mui-text-right">
+			    	<!--<span class="mui-icon mui-icon-extra mui-icon-extra-filter"></span>-->
+			    	<span class="mui-icon mui-icon-home-filled home"></span>
+			    </div>
+			</div>
+		</header>
+		<div class="mui-content">
+			<div class="mui-row filter">
+			    <div class="mui-col-sm-4 mui-col-xs-4 mui-text-center" id="showCityPicker3">
+			    	<div>
+			    		<span id="cityResult3">区域</span>
+			    		<span class="mui-icon mui-icon-arrowdown"></span>
+			    	</div>
+			    </div>
+			    <div class="mui-col-sm-4 mui-col-xs-4 mui-text-center">
+			    	<div id="showCityPicker2">
+			    		<span id="Result2">栏目</span>
+			    		<span class="mui-icon mui-icon-arrowdown"></span>
+			    	</div>
+			    </div>
+			    <div class="mui-col-sm-4 mui-col-xs-4 mui-text-center">
+			    	<div id="sortPicker">
+			    		<span id="Result1">排序</span>
+			    		<span class="mui-icon mui-icon-arrowdown"></span>
+			    	</div>
+			    </div>
+			</div>
+		</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		//启用双击监听
+		mui.init({
+			subpages:[{ 
+				url:'pullrefresh_sub.html',
+				id:'pullrefresh_sub.html',
+				styles:{
+					top: $(window).width()>=768?'160px':'100px',
+					bottom: '0px', 
+				}
+			}]
+		});
+	
+		var contentWebview = null;
+		document.querySelector('header').addEventListener('doubletap',function () {
+			if(contentWebview==null){
+				contentWebview = plus.webview.currentWebview().children()[0];
+			}
+			contentWebview.evalJS("mui('#pullrefresh').pullRefresh().scrollTo(0,0,100)");
+		});
+		var open=0,subWebview=null;
+		mui.plusReady(function(){
+			$('#showCityPicker3').on('click',function(){
+				subWebview = plus.webview.getWebviewById('pullrefresh_sub.html');
+				if(!open){
+					subWebview.evalJS('document.querySelector("#filter").style.display="block"');
+					open = 1;
+				}else{
+					subWebview.evalJS('document.querySelector("#filter").style.display="none"');
+					open = 0;
+				}
+			});
+			var old_back = mui.back;
+			mui(document).on('tap','.mui-back',function(e){
+				e.preventDefault();
+				subWebview = plus.webview.getWebviewById('pullrefresh_sub.html');
+				subWebview.close();
+				old_back();
+			});
+		});
+		
+		</script>
+</html>

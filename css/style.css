@@ -1,0 +1,292 @@
+.ui-page-login, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px; }
+
+a {
+  text-decoration: none; }
+
+.mui-bar-tab .mui-tab-item.mui-active {
+  color: #F52F6C; }
+
+.mui-android #filter, .mui-ios #filter {
+  width: 100%;
+  height: 220px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  overflow: hidden;
+  display: none;
+  background-color: #E8E8E8; }
+  .mui-android #filter .mui-row, .mui-ios #filter .mui-row {
+    height: 100%;
+    padding: 0;
+    margin: 0; }
+    .mui-android #filter .mui-row .mui-filter-continer, .mui-ios #filter .mui-row .mui-filter-continer {
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      overflow: auto; }
+      .mui-android #filter .mui-row .mui-filter-continer ul, .mui-ios #filter .mui-row .mui-filter-continer ul {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        background-color: #E8E8E8;
+        margin-top: 0;
+        text-align: center; }
+        .mui-android #filter .mui-row .mui-filter-continer ul li, .mui-ios #filter .mui-row .mui-filter-continer ul li {
+          list-style: none;
+          line-height: 50px; }
+        .mui-android #filter .mui-row .mui-filter-continer ul li.active, .mui-ios #filter .mui-row .mui-filter-continer ul li.active {
+          background: #FFFFFF; }
+
+header.mui-bar {
+  line-height: 45px;
+  background-color: #F52F6C;
+  color: #FFFFFF; }
+  header.mui-bar .header-row .header-title h1.mui-title {
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    color: #FFFFFF; }
+  header.mui-bar .header-row .header-title .mui-search .mui-placeholder {
+    color: #FFFFFF;
+    line-height: 47px; }
+    header.mui-bar .header-row .header-title .mui-search .mui-placeholder span.mui-icon {
+      color: #FFFFFF; }
+    header.mui-bar .header-row .header-title .mui-search .mui-placeholder span {
+      font-size: 14px; }
+  header.mui-bar .header-row .header-title h4 {
+    line-height: 35px; }
+  header.mui-bar .header-row .header-turnTheLight {
+    text-align: right; }
+    header.mui-bar .header-row .header-turnTheLight .mui-switch {
+      text-align: right; }
+  header.mui-bar .header-row .header-chat a {
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer; }
+
+.mui-content {
+  height: 100%;
+  background-color: #FFFFFF; }
+  .mui-content .mui-scroll .mui-grid-view li a.mui-category-list .mui-media-body {
+    height: auto;
+    padding: 4px;
+    text-align: left; }
+    .mui-content .mui-scroll .mui-grid-view li a.mui-category-list .mui-media-body h4.title {
+      font-size: 18px;
+      padding: 2px; }
+    .mui-content .mui-scroll .mui-grid-view li a.mui-category-list .mui-media-body p.price {
+      color: red;
+      line-height: 2em; }
+      .mui-content .mui-scroll .mui-grid-view li a.mui-category-list .mui-media-body p.price i {
+        padding-right: 2px; }
+    .mui-content .mui-scroll .mui-grid-view li a.mui-category-list .mui-media-body p.location i {
+      padding-right: 2px; }
+  .mui-content .mui-table-view:first-child {
+    margin: 0px; }
+  .mui-content .mui-table-view .mui-media .mui-media-object.circle {
+    border-radius: 50%; }
+  .mui-content .mui-table-view .mui-media .mui-media-body .mui-row div span {
+    font-weight: normal;
+    font-size: 24px;
+    color: #666666; }
+  .mui-content .mui-table-view .mui-media .mui-media-body .mui-row div p.price i {
+    font-size: 12px; }
+  .mui-content .mui-table-view .mui-media .mui-media-body .mui-row div p.price span {
+    font-size: 12px; }
+  .mui-content .mui-table-view .mui-media .mui-media-body .mui-row div p.price span.meony {
+    color: #F52F6C; }
+  .mui-content .mui-table-view .mui-media .mui-media-body .mui-row div p.old-price {
+    font-size: 12px;
+    text-decoration: line-through; }
+  .mui-content .mui-tool-bar {
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    background-color: #fff;
+    height: 50px;
+    line-height: 50px; }
+    .mui-content .mui-tool-bar div div {
+      position: relative; }
+      .mui-content .mui-tool-bar div div span {
+        position: absolute;
+        left: 4px;
+        top: 12px; }
+    .mui-content .mui-tool-bar div div:last-of-type {
+      color: #FFFFFF;
+      background-color: #F52F6C; }
+  .mui-content .mui-slider .mui-slider-group .mui-slider-item a img {
+    height: 200px; }
+  .mui-content .mui-table-view .mui-table-view-cell .mui-collapse-content {
+    padding-bottom: 10px; }
+    .mui-content .mui-table-view .mui-table-view-cell .mui-collapse-content .mui-row div {
+      text-align: center;
+      height: 120px; }
+      .mui-content .mui-table-view .mui-table-view-cell .mui-collapse-content .mui-row div .img-responsive {
+        height: 80%;
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 5px; }
+  .mui-content .filter div {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #EBEBEB; }
+    .mui-content .filter div div {
+      height: 70px;
+      line-height: 70px;
+      border: none; }
+  .mui-content .categray .mui-list-unstyled li {
+    line-height: 35px;
+    color: #666666; }
+  .mui-content .categray .mui-list-unstyled li.active {
+    color: #000000;
+    font-weight: 600;
+    border-left: 2px solid #e60b4e; }
+  .mui-content .content h3 {
+    font-size: 20px;
+    font-weight: 600; }
+  .mui-content .content .continer img.activity {
+    margin-top: 10px;
+    height: 120px;
+    width: 96%; }
+  .mui-content .content .continer .list-items {
+    margin-top: 5px; }
+    .mui-content .content .continer .list-items a {
+      text-decoration: none; }
+    .mui-content .content .continer .list-items img {
+      height: 50px;
+      width: 80px; }
+    .mui-content .content .continer .list-items h4 {
+      color: #666666; }
+  .mui-content .mui-continer {
+    background-color: #FFFFFF;
+    padding: 10px;
+    line-height: 1.8em; }
+    .mui-content .mui-continer img {
+      width: 100%;
+      margin: 0 auto; }
+  .mui-content .margin-top1 {
+    margin-top: 1px; }
+  .mui-content .margin-bottom1 {
+    margin-top: 1px; }
+  .mui-content .margin-left1 {
+    margin-top: 1px; }
+  .mui-content .margin-right1 {
+    margin-top: 1px; }
+  .mui-content .margin-top5 {
+    margin-top: 5px; }
+  .mui-content .margin-bottom5 {
+    margin-top: 5px; }
+  .mui-content .margin-left5 {
+    margin-top: 5px; }
+  .mui-content .margin-right5 {
+    margin-top: 5px; }
+  .mui-content .margin-top10 {
+    margin-top: 10px; }
+  .mui-content .margin-bottom10 {
+    margin-top: 10px; }
+  .mui-content .margin-left10 {
+    margin-top: 10px; }
+  .mui-content .margin-right10 {
+    margin-top: 10px; }
+  .mui-content .margin-top15 {
+    margin-top: 15px; }
+  .mui-content .margin-bottom15 {
+    margin-top: 15px; }
+  .mui-content .margin-left15 {
+    margin-top: 15px; }
+  .mui-content .margin-right15 {
+    margin-top: 15px; }
+  .mui-content .margin-top20 {
+    margin-top: 20px; }
+  .mui-content .margin-bottom20 {
+    margin-top: 20px; }
+  .mui-content .margin-left20 {
+    margin-top: 20px; }
+  .mui-content .margin-right20 {
+    margin-top: 20px; }
+  .mui-content .margin-top30 {
+    margin-top: 30px; }
+  .mui-content .margin-bottom30 {
+    margin-top: 30px; }
+  .mui-content .margin-left30 {
+    margin-top: 30px; }
+  .mui-content .margin-right30 {
+    margin-top: 30px; }
+  .mui-content .mui-short-cart-list .mui-row .cart img {
+    width: 35%; }
+
+@media screen and (min-width: 760px) {
+  .mui-bar-nav ~ .mui-content {
+    padding-top: 85px; }
+
+  header.mui-bar {
+    height: 85px;
+    line-height: 85px; }
+    header.mui-bar .header-row .header-title h1.mui-title {
+      line-height: 80px;
+      font-size: 48px; }
+    header.mui-bar .header-row .header-title .mui-search input {
+      height: 49px;
+      line-height: 80px; }
+    header.mui-bar .header-row .header-title .mui-search .mui-placeholder {
+      line-height: 80px; }
+      header.mui-bar .header-row .header-title .mui-search .mui-placeholder span {
+        font-size: 24px; }
+    header.mui-bar .header-row .header-title h4 {
+      font-size: 48px;
+      line-height: 80px; }
+    header.mui-bar .mui-icon {
+      font-size: 48px;
+      line-height: 80px; }
+
+  .mui-content .mui-table-view .mui-media a .mui-media-object.circle {
+    border-radius: 50%;
+    width: 220px; }
+  .mui-content .mui-table-view .mui-media .mui-media-body .mui-row div p {
+    line-height: 2.2em; }
+  .mui-content .mui-table-view .mui-media .mui-media-body .mui-row div span {
+    font-size: 48px; }
+  .mui-content .mui-table-view .mui-media .mui-media-body .mui-row div p.mui-ellipsis {
+    font-size: 30px;
+    line-height: 2em; }
+  .mui-content .mui-table-view .mui-media .mui-media-body .mui-row div p.price i {
+    font-size: 24px; }
+  .mui-content .mui-table-view .mui-media .mui-media-body .mui-row div p.price span {
+    font-size: 24px; }
+  .mui-content .mui-table-view .mui-media .mui-media-body .mui-row div p.price span.meony {
+    font-size: 36px; }
+  .mui-content .mui-continer p {
+    font-size: 30px;
+    line-height: 2.2em; }
+  .mui-content .categray .mui-list-unstyled li {
+    font-size: 24px;
+    line-height: 65px; }
+  .mui-content .content h3 {
+    font-size: 36px; }
+  .mui-content .content .continer a {
+    text-decoration: none; }
+  .mui-content .content .continer img.activity {
+    margin-top: 10px;
+    height: 180px;
+    width: 96%; }
+  .mui-content .content .continer .list-items {
+    margin-top: 15px; }
+    .mui-content .content .continer .list-items img {
+      height: 70px;
+      width: 100px; }
+  .mui-content .filter div div {
+    height: 100px;
+    line-height: 90px; }
+    .mui-content .filter div div span {
+      font-size: 30px; }
+  .mui-content .mui-grid-view .mui-table-view-cell .mui-media-body {
+    height: 60px;
+    line-height: 60px;
+    font-size: 26.4px; } }
+
+/*# sourceMappingURL=style.css.map */

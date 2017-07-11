@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/style.css"/>
+	</head>
+	<body>
+		<div class="mui-content">
+		    <!--轮播图开始-->
+			<div class="mui-slider">
+			  <div class="mui-slider-group mui-slider-loop" mui-slider-indicator="1000">
+			    <!--支持循环，需要重复图片节点-->
+			    <div class="mui-slider-item mui-slider-item-duplicate">
+			    	<a href="#">
+			    		<img src="images/4.jpg" />
+			    		<p class="mui-slider-title">保守</p>
+			    	</a>
+			    </div>
+			    <div class="mui-slider-item">
+			    	<a href="#">
+			    		<img src="images/1.jpg" />
+			    		<p class="mui-slider-title">古典</p>
+			    	</a>
+			    </div>
+			    <div class="mui-slider-item">
+			    	<a href="#">
+			    		<img src="images/2.jpg" />
+			    		<p class="mui-slider-title">妖娆</p>
+			    	</a>
+			    </div>
+			    <div class="mui-slider-item">
+			    	<a href="#">
+			    		<img src="images/3.jpg" />
+			    		<p class="mui-slider-title">保守</p>
+			    	</a>
+			    </div>
+			    <div class="mui-slider-item">
+			    	<a href="#">
+			    		<img src="images/4.jpg" />
+			    		<p class="mui-slider-title">妩媚</p>
+			    	</a>
+			    </div>
+			    <!--支持循环，需要重复图片节点-->
+			    <div class="mui-slider-item mui-slider-item-duplicate">
+			    	<a href="#">
+			    		<img src="images/1.jpg" />
+			    		<p class="mui-slider-title">古典</p>
+			    	</a>
+			    </div>
+			  </div>
+			  <div class="mui-slider-indicator mui-text-right">
+	              <div class="mui-indicator mui-active"></div>
+	              <div class="mui-indicator"></div>
+	              <div class="mui-indicator"></div>
+	              <div class="mui-indicator"></div>
+	          </div>
+			</div>
+			<!--轮播图结束-->
+			<!--推荐主题开始-->
+			<div class="mui-row top-project">
+				<div class="mui-col-sm-3 mui-col-xs-3 mui-text-center">
+					1
+				</div>
+				<div class="mui-col-sm-3 mui-col-xs-3 mui-text-center">
+					2
+				</div>
+				<div class="mui-col-sm-3 mui-col-xs-3 mui-text-center">
+					3
+				</div>
+				<div class="mui-col-sm-3 mui-col-xs-3 mui-text-center">
+					4
+				</div>
+			</div>
+			<!--推荐主题结束-->
+		</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script>
+		//获得slider插件对象
+		var gallery = mui('.mui-slider');
+		gallery.slider({
+		  interval:2e3//自动轮播周期，若为0则不自动播放，默认为0；
+		});
+	</script>
+</html>
