@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/icons-extra.css"/>
+		<link rel="stylesheet" href="css/font-awesome.min.css"/>
+		<link rel="stylesheet" href="css/style.css"/>
+		<style type="text/css">
+			html,body{
+				background-color: #fff;
+			}
+		</style>
+	</head>
+	<body class="mui-fullscreen">
+		<header class="mui-bar mui-bar-nav">
+			<div class="mui-row header-row">
+			    <div class="mui-col-sm-2 mui-col-xs-2 header-search mui-text-left">
+			    	<span class="mui-icon mui-icon-back mui-action-back"></span>
+			    </div>
+			    <div class="mui-col-sm-8 mui-col-xs-8 header-title mui-text-center">
+			    	 <h4 id="title">确认订单</h4>
+			    </div>
+			    <div class="mui-col-sm-2 mui-col-xs-2 header-chat mui-text-right">
+			    </div>
+			</div>
+		</header>
+		<div class="mui-content">
+			<div class="mui-row location">
+			    <div class="mui-col-sm-1 mui-col-xs-1">
+			    	<span class="mui-icon mui-icon-checkmarkempty mui-red"></span>
+			    </div>
+			    <div class="mui-col-sm-10 mui-col-xs-10">
+			    	<h5>魏巍 
+			    		<i>13584866592</i>
+			    		<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">公司</button>
+			    	</h5>
+			    	<button type="button" class="mui-btn mui-btn-danger mui-btn-outlined horizontal">默认</button>
+			        <a href="location.html">
+			        	江苏省苏州市高新区钻石广场2幢608室
+			        </a>
+			    </div>   
+			    <div class="mui-col-sm-1 mui-col-xs-1">
+			    	<span class="mui-icon mui-icon-compose"></span>
+			    </div> 
+			</div>
+			<div class="mui-row location">
+			    <div class="mui-col-sm-11 mui-col-xs-11">
+			    	<h5>魏巍 
+			    		<i>13584866592</i>
+			    		<button type="button" class="mui-btn mui-btn-warning mui-btn-outlined">家</button>
+			    	</h5>
+			        <a href="location.html">
+			        	江苏省苏州市高新区钻石广场2幢608室
+			        </a>
+			    </div>
+			    <div class="mui-col-sm-1 mui-col-xs-1">
+			    	<span class="mui-icon mui-icon-compose"></span>
+			    </div> 
+			</div>
+			<div class="mui-row">
+				<div class="add-location-button">
+					<button type="button" class="mui-btn mui-btn-block" dataurl="add_location.html"><span class="mui-icon mui-icon-plusempty"></span>新建地址</button>
+				</div>
+			</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.ready(function(){
+				mui(document).on('tap','.mui-btn',function(e){
+					id = this.getAttribute('dataurl');
+					alert(id);
+					mui.openWindow({
+						id:id,
+						url:id
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

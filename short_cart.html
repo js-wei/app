@@ -1,49 +1,172 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>购物车</title>
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="css/mui.min.css" rel="stylesheet" />
 		<link rel="stylesheet" href="css/icons-extra.css"/>
 		<link rel="stylesheet" href="css/font-awesome.min.css"/>
 		<link rel="stylesheet" href="css/style.css"/>
+		<style type="text/css">
+			html,body{
+				background-color: #fff;
+			}
+		</style>
 	</head>
-	<style type="text/css">
-		html,body{
-			background:white;
-		}
-	</style>
-	<body>
+	<body class="mui-fullscreen">
 		<header class="mui-bar mui-bar-nav">
 			<div class="mui-row header-row">
 			    <div class="mui-col-sm-2 mui-col-xs-2 header-search mui-text-left">
 			    	<span class="mui-icon mui-icon-back mui-action-back"></span>
 			    </div>
-			    <div class="mui-col-sm-8 mui-col-xs-8 header-title mui-text-left">
-			    	<h1 id="title" class="mui-title">title</h1>
+			    <div class="mui-col-sm-8 mui-col-xs-8 header-title mui-text-center">
+			    	 <h4 id="title">购物车</h4>
+			    </div>
+			    <div class="mui-col-sm-2 mui-col-xs-2 header-chat mui-text-right">
+			    	<span class="mui-icon mui-icon-compose"></span>
+			    	<span class="hide">
+			    		<span class="mui-icon mui-icon-trash"></span>
+			    		<span class="mui-icon mui-icon-checkmarkempty"></span>
+			    	</span>
 			    </div>
 			</div>
 		</header>
 		<div class="mui-content">
-			<div class="mui-short-cart-list">
+		    <div class="tooltip">
+				<span class="mui-icon mui-icon-extra mui-icon-extra-outline"></span>
+				请在<span class="mui-red">半小时</span>内提交订单,时间结束后商品可能被抢完.
+			</div>
+			<ul class="mui-short-cart-list">
+				<li>
+					<div class="mui-row">
+					    <div class="mui-col-sm-1 mui-col-xs-1 cart">
+						    <div class="mui-input-row mui-checkbox mui-left">
+								<label>&nbsp;</label>
+								<input name="checkbox" type="checkbox" checked="checked">
+							</div>
+					    </div>
+					    <div class="mui-col-sm-8 mui-col-xs-8 cart">
+					    	<img src="images/4.jpg" alt=""/>
+					    	<div class="mui-short-cart-details">
+					    		<p class="title">
+					    			女款塑身内衣--贴身款
+					    		</p>
+					    		<p>
+					    			<i class="fa fa-cny"></i>99.00
+					    		</p>
+					    		<p>
+					    			含运费12元
+					    		</p>
+					    	</div>
+					    </div>
+					    <div class="mui-col-sm-3 mui-col-xs-3 cart">
+					    	<div class="mui-numbox" data-numbox-step='1' data-numbox-min='1' data-numbox-max='100'>
+							  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+							  <input class="mui-numbox-input" type="number" />
+							  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+							</div>
+							<!--<span class="mui-icon mui-icon-trash"></span>-->
+					    </div>
+					</div>
+				</li>
+				<li>
+					<div class="mui-row">
+					    <div class="mui-col-sm-1 mui-col-xs-1 cart">
+						    <div class="mui-input-row mui-checkbox mui-left">
+								<label>&nbsp;</label>
+								<input name="checkbox" type="checkbox" checked="checked">
+							</div>
+					    </div>
+					    <div class="mui-col-sm-8 mui-col-xs-8 cart">
+					    	<img src="images/4.jpg" alt=""/>
+					    	<div class="mui-short-cart-details">
+					    		<p class="title">
+					    			女款塑身内衣--贴身款
+					    		</p>
+					    		<p>
+					    			<i class="fa fa-cny"></i>99.00
+					    		</p>
+					    		<p>
+					    			含运费12元
+					    		</p>
+					    	</div>
+					    </div>
+					    <div class="mui-col-sm-3 mui-col-xs-3 cart">
+					    	<div class="mui-numbox" data-numbox-step='1' data-numbox-min='1' data-numbox-max='100'>
+							  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+							  <input class="mui-numbox-input" type="number" />
+							  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+							</div>
+							<!--<span class="mui-icon mui-icon-trash"></span>-->
+					    </div>
+					</div>
+				</li>
+				<li>
+					<div class="mui-row">
+					    <div class="mui-col-sm-1 mui-col-xs-1 cart">
+						    <div class="mui-input-row mui-checkbox mui-left">
+								<label>&nbsp;</label>
+								<input name="checkbox" type="checkbox" checked="checked">
+							</div>
+					    </div>
+					    <div class="mui-col-sm-8 mui-col-xs-8 cart">
+					    	<img src="images/4.jpg" alt=""/>
+					    	<div class="mui-short-cart-details">
+					    		<p class="title">
+					    			女款塑身内衣--贴身款
+					    		</p>
+					    		<p>
+					    			<i class="fa fa-cny"></i>99.00
+					    		</p>
+					    		<p>
+					    			含运费12元
+					    		</p>
+					    	</div>
+					    </div>
+					    <div class="mui-col-sm-3 mui-col-xs-3 cart">
+					    	<div class="mui-numbox" data-numbox-step='1' data-numbox-min='1' data-numbox-max='100'>
+							  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+							  <input class="mui-numbox-input" type="number" />
+							  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+							</div>
+					    </div>
+					</div>
+				</li>
+			</ul>
+			<div class="tooltip">
+				<span class="mui-icon mui-icon-extra mui-icon-extra-heart mui-darkred"></span>
+				全场100%正品保障,请安全放心购买
+			</div>
+			<div class="mui-tool-bar mui-text-center">
 				<div class="mui-row">
-				    <div class="mui-col-sm-8 cart">
-					    <div class="mui-input-row mui-checkbox mui-left">
-							<label>checked：false</label>
-							<input name="checkbox" value="Item 1" type="checkbox">
-						</div>
-				    	<img src="images/4.jpg" alt=""/>
-				    	<div class="">
-				    		<p>
-				    			<i class="fa fa-cny"></i>99.00
-				    		</p>
-				    		<p>
-				    			含运费12元
-				    		</p>
-				    	</div>
-				    </div>
+					<div class="mui-col-sm-9 mui-col-xs-9">
+						<p>共计: <i class="fa fa-cny"></i>&nbsp;<i class="mui-red">950</i></p>
+						<p>含快递:<i class="fa fa-cny"></i>&nbsp;<i class="mui-red">20</i></p>
+					</div>
+					<div class="mui-col-xs-3 mui-col-xs-3 buy">
+					  立即购买
+					</div>
 				</div>
 			</div>
 		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.ready(function(){
+				mui.init({
+					preloadPages: [{
+				        url:"pay.html",
+				        id:"pay.html", 
+				    }]
+				});
+				mui(document).on('tap','.buy',function(){
+					id = "pay.html";
+					mui.openWindow({
+						id:id,
+						url:id
+					});
+				});
+			});
+		</script>
 	</body>
 </html>
