@@ -101,7 +101,7 @@
 	owner.setSettings = function(settings) {
 		settings = settings || {};
 		localStorage.setItem('$settings', JSON.stringify(settings));
-	}
+	};
 
 	/**
 	 * 设置应用本地配置
@@ -109,10 +109,10 @@
 	owner.getSettings = function() {
 			var settingsText = localStorage.getItem('$settings') || "{}";
 			return JSON.parse(settingsText);
-		}
-		/**
-		 * 获取本地是否安装客户端
-		 **/
+	};
+	/**
+	 * 获取本地是否安装客户端
+	 **/
 	owner.isInstalled = function(id) {
 		if (id === 'qihoo' && mui.os.plus) {
 			return true;
@@ -144,5 +144,51 @@
 					break;
 			}
 		}
-	}
+	};
+	owner.goHome=function(){
+		var launch = plus.webview.getLaunchWebview();
+		launch.show();
+	};
+	/**
+	 *打电话 
+	 * @param {Object} number手机号
+	 */
+	owner.call = function(number) { 
+        if(plus.os.name=="Android"){ 
+            var Intent = plus.android.importClass("android.content.Intent"); 
+            var Uri = plus.android.importClass("android.net.Uri"); 
+            var main = plus.android.runtimeMainActivity(); 
+            var uri = Uri.parse("tel:"+number); 
+            var call = new Intent("android.intent.action.CALL", uri); 
+            main.startActivity(call); 
+        }else{ 
+            //plus.device.dial(number, false); 
+            var UIAPP=plus.ios.importClass("UIApplication"); 
+            var NSURL=plus.ios.importClass("NSURL"); 
+ 
+            var app=UIAPP.sharedApplication(); 
+ 
+            app.openURL(NSURL.URLWithString("tel://"+number)); 
+        } 
+    };
+	/**
+	 *发短信 
+	 * @param {Object} number	号码
+	 * @param {Object} text		内容
+	 */
+    owner.sms=function(number,text){ 
+        if (plus.os.name == "Android") { 
+            var Intent = plus.android.importClass("android.content.Intent"); 
+            var Uri = plus.android.importClass("android.net.Uri");
+            var uri = Uri.parse("smsto:"+number);
+            var intent = new Intent(Intent.ACTION_SENDTO, uri);   
+            intent.putExtra("sms_body",text);  
+            plus.android.runtimeMainActivity().startActivity(intent);   
+        } else { 
+            var UIAPP=plus.ios.importClass("UIApplication"); 
+            var NSURL=plus.ios.importClass("NSURL"); 
+            var app=UIAPP.sharedApplication(); 
+            app.openURL(NSURL.URLWithString("sms://"+number)); 
+        } 
+    }; 
 }(mui, window.app = {}));

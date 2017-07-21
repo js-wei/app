@@ -82,7 +82,7 @@
 		"Webview": {},
 		"NativeUI": {},
 		"Navigator": {},
-		"NativeObj": {},"OAuth":{},"Device":{},"Camera":{},"Barcode":{},"Maps":{},"Audio":{},"Speech":{},"Contacts":{},"Geolocation":{}
+		"NativeObj": {},"OAuth":{},"Device":{},"Camera":{},"Barcode":{},"Maps":{},"Audio":{},"Speech":{},"Contacts":{},"Geolocation":{},"Messaging":{}
 	},
 	"plus": {
 		"statusbar": {
@@ -109,7 +109,7 @@
 				"keystore": "",/*Android应用打包使用的密钥库文件*/
 				"password": "",/*Android应用打包使用密钥库中证书的密码*/
 				"aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
-				"permissions": ["<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>","<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>","<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>","<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>","<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>","<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.VIBRATE\"/>","<uses-permission android:name=\"android.permission.READ_LOGS\"/>","<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>","<uses-permission android:name=\"android.permission.CALL_PHONE\"/>","<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>","<uses-feature android:name=\"android.hardware.camera.autofocus\"/>","<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>","<uses-feature android:name=\"android.hardware.camera\"/>","<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>","<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.CAMERA\"/>"]
+				"permissions": ["<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>","<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>","<uses-permission android:name=\"android.permission.VIBRATE\"/>","<uses-permission android:name=\"android.permission.READ_LOGS\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-feature android:name=\"android.hardware.camera.autofocus\"/>","<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.CAMERA\"/>","<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>","<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>","<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>","<uses-permission android:name=\"android.permission.SEND_SMS\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>","<uses-permission android:name=\"android.permission.CALL_PHONE\"/>","<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>","<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>","<uses-feature android:name=\"android.hardware.camera\"/>","<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>","<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>","<uses-permission android:name=\"android.permission.WRITE_SMS\"/>","<uses-permission android:name=\"android.permission.READ_SMS\"/>"]
 				,"ImmersedStatusbar":true
 			},
 			"orientation": [
@@ -173,10 +173,7 @@
 				},
 				"android": {
 					"mdpi": "", /*普通屏启动图片，分辨率：240x282*/
-					"ldpi": "", /*大屏启动图片，分辨率：320x442*/
-					"hdpi": "C:/Users/lenovo/Desktop/logo.png", /*高分屏启动图片，分辨率：480x762*/
-					"xhdpi": "C:/Users/lenovo/Desktop/logo.png", /*720P高分屏启动图片，分辨率：720x1242*/
-					"xxhdpi": "C:/Users/lenovo/Desktop/logo.png"
+					"ldpi": ""
 				}
 			}
 		}
@@ -290,11 +287,13 @@
 					"fonts/mui-icons-extra.ttf",
 					"css/icons-extra.css",
 					"css/style.css",
-					"css/font-awesome.min.css"
+					"css/font-awesome.min.css",
+					"tab-webview-subpage-cart.html",
+					"tab-webview-subpage-find.html",
+					"tab-webview-subpage-setting.html",
+					"tab-webview-subpage-chat.html"
 				],
 				"refer": [
-					"tab-webview-subpage-setting.html",
-					"tab-webview-subpage-chat.html",
 					"tab-webview-subpage-contact.html",
 					"categray.html",
 					"barcode.html"
@@ -335,7 +334,18 @@
 			"tab-webview-subpage-chat.html": {
 				"resources": [
 					"js/mui.min.js",
-					"fonts/mui.ttf"
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/style.css",
+					"images/cbd.jpg",
+					"js/jquery-3.2.1.min.js",
+					"js/city.data-3.js",
+					"js/mui.js",
+					"images/4.jpg",
+					"fonts/fontawesome-webfont.ttf",
+					"css/font-awesome.min.css",
+					"fonts/fontawesome-webfont.woff",
+					"shop_detail.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -386,7 +396,9 @@
 				"resources": [
 					"js/mui.min.js",
 					"css/mui.min.css",
-					"css/style.css"
+					"css/style.css",
+					"js/common.js",
+					"js/mui.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -405,7 +417,8 @@
 					"css/mui.min.css",
 					"css/style.css",
 					"css/icons-extra.css",
-					"js/jquery-3.2.1.min.js"
+					"js/jquery-3.2.1.min.js",
+					"js/app.js"
 				],
 				"refer": [
 					"categray.html",
@@ -432,7 +445,8 @@
 					"css/mui.picker.css",
 					"js/jquery-3.2.1.min.js",
 					"fonts/fontawesome-webfont.ttf",
-					"css/font-awesome.min.css"
+					"css/font-awesome.min.css",
+					"fonts/fontawesome-webfont.woff"
 				],
 				"refer": [
 					"details.html"
@@ -485,7 +499,9 @@
 					"css/icons-extra.css",
 					"images/4.jpg",
 					"js/mui.js",
-					"js/mui.min.js"
+					"js/mui.min.js",
+					"fonts/mui-icons-extra.ttf",
+					"fonts/fontawesome-webfont.woff"
 				],
 				"refer": [
 					"pay.html"
@@ -494,7 +510,12 @@
 			},
 			"location.html": {
 				"resources": [
-					"js/mui.min.js"
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/font-awesome.min.css",
+					"css/mui.min.css",
+					"css/style.css",
+					"css/icons-extra.css"
 				],
 				"refer": [
 					"add_location.html"
@@ -509,16 +530,118 @@
 					"css/font-awesome.min.css",
 					"css/mui.min.css",
 					"css/style.css",
-					"css/icons-extra.css"
+					"css/icons-extra.css",
+					"css/mui.picker.min.css",
+					"css/mui.poppicker.css",
+					"js/mui.picker.js",
+					"js/mui.poppicker.js",
+					"js/city.data-3.js"
 				],
 				"refer": [],
 				"priority": 0
 			},
 			"pay.html": {
-				"resources": [],
-				"refer": [
-					"location.html"
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/font-awesome.min.css",
+					"css/mui.min.css",
+					"css/style.css",
+					"fonts/fontawesome-webfont.ttf",
+					"css/icons-extra.css",
+					"images/4.jpg",
+					"js/app.js",
+					"fonts/fontawesome-webfont.woff"
 				],
+				"refer": [
+					"location.html",
+					"address.html"
+				],
+				"priority": 0
+			},
+			"address.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/font-awesome.min.css",
+					"css/mui.min.css",
+					"css/style.css",
+					"css/icons-extra.css"
+				],
+				"refer": [
+					"add_address.html"
+				],
+				"priority": 0
+			},
+			"add_address.html": {
+				"resources": [
+					"fonts/mui-icons-extra.ttf",
+					"js/mui.picker.js",
+					"js/mui.min.js",
+					"js/mui.poppicker.js",
+					"css/mui.picker.min.css",
+					"js/city.data-3.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/style.css",
+					"css/mui.poppicker.css",
+					"css/icons-extra.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"categray_sub.html": {
+				"resources": [
+					"js/mui.min.js",
+					"js/jquery-3.2.1.min.js",
+					"images/cbd.jpg",
+					"css/mui.min.css",
+					"css/style.css",
+					"images/7.jpg"
+				],
+				"refer": [
+					"categray_list.html"
+				],
+				"priority": 0
+			},
+			"tab-webview-subpage-cart.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"images/4.jpg",
+					"css/style.css"
+				],
+				"refer": [
+					"pay.html"
+				],
+				"priority": 0
+			},
+			"tab-webview-subpage-find.html": {
+				"resources": [
+					"js/mui.min.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"shop_detail.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui-icons-extra.ttf",
+					"images/2.jpg",
+					"fonts/mui.ttf",
+					"images/1.jpg",
+					"css/font-awesome.min.css",
+					"css/mui.min.css",
+					"css/style.css",
+					"fonts/fontawesome-webfont.ttf",
+					"images/3.jpg",
+					"css/icons-extra.css",
+					"images/4.jpg",
+					"js/app.js",
+					"fonts/fontawesome-webfont.woff"
+				],
+				"refer": [],
 				"priority": 0
 			}
 		},

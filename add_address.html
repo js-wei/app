@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/icons-extra.css"/>
+		<link rel="stylesheet" href="css/mui.picker.min.css"/>
+		<link rel="stylesheet" href="css/mui.poppicker.css"/>
+		<link rel="stylesheet" href="css/style.css"/>
+		<style type="text/css">
+			html,body{
+				background-color: #fff;
+			}
+		</style>
+	</head>
+	<body class="mui-fullscreen">
+		<header class="mui-bar mui-bar-nav">
+			<div class="mui-row header-row">
+			    <div class="mui-col-sm-2 mui-col-xs-2 header-search mui-text-left">
+			    	<span class="mui-icon mui-icon-back"></span>
+			    </div>
+			    <div class="mui-col-sm-8 mui-col-xs-8 header-title mui-text-center">
+			    	 <h4 id="title">新建收货地址</h4>
+			    </div>
+			    <div class="mui-col-sm-2 mui-col-xs-2 header-chat mui-text-right">
+			    </div>
+			</div>
+		</header>
+		<div class="mui-content">
+			<form class="mui-input-group">
+			    <div class="mui-input-row">
+			        <label>收货人:</label>
+			    	<input type="text" name="form" id="username" class="mui-input-clear first">
+			    </div>
+			    <div class="mui-input-row">
+			        <label>手机号:</label>
+			        <input type="text" name="phone" id="phone" class="mui-input-clear first">
+			    </div>
+			    <div class="mui-input-row choocie">
+			        <label>所在地区:</label>
+			        <input type="text" readonly="readonly" id="showCityPicker3">
+			        <span class="mui-icon mui-icon-arrowright"></span>
+			    </div>
+			    <div class="mui-input-row">
+			        <label>详细地址:</label>
+			        <input type="text" class="mui-input-clear" placeholder="街道/楼牌号等">
+			    </div>
+			   	<div class="mui-input-row">
+			   	   <label>标签:</label>
+			   	   <button type="button" class="mui-btn">公司</button>
+			       <button type="button" class="mui-btn mui-active">家</button>
+			       <button type="button" class="mui-btn">学校</button>
+			       <button type="button" class="mui-btn"><span class="mui-icon mui-icon-plusempty"></span></button>
+			    </div>
+			    <div class="mui-input-row mui-checkbox">
+				  <label>默认地址</label>
+				  <input name="checkbox1" value="1" type="checkbox">
+				</div>
+			</form>
+			<div class="add-location-button">
+		        <button type="button" class="mui-btn mui-btn-danger" id="save-and-used">保存并使用</button>
+		    </div>
+		    <div class="choose">
+		    	<span class="mui-icon mui-icon-extra mui-icon-extra-addpeople"></span>
+		    	<span class="text">选联系人</span>
+		    </div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/mui.picker.js"></script>
+		<script src="js/mui.poppicker.js"></script>
+		<script src="js/city.data-3.js"></script>
+		<script type="text/javascript">
+			mui.init({
+			  preloadPages:[{
+			    id:'pay.html',
+			    url:'pay.html'           
+			  }]
+			});
+			mui.plusReady(function(){
+				var name = document.getElementById("username"),
+				phone= document.getElementById("phone");
+				mui(document).on('tap','.choose',function(e){
+					var REQUESTCODE = 1000;
+					main = plus.android.runtimeMainActivity();
+					var Intent = plus.android.importClass('android.content.Intent');
+					var ContactsContract = plus.android.importClass('android.provider.ContactsContract');
+					var intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
+					main.onActivityResult = function(requestCode, resultCode, data) { 
+					  if (REQUESTCODE == requestCode) {
+					    var phoneNumber = null;
+					    var resultString = "";
+					    var context = main;
+					    plus.android.importClass(data);
+					    var contactData = data.getData();
+					    var resolver = context.getContentResolver();
+					    plus.android.importClass(resolver);
+					    var cursor = resolver.query(contactData, null, null, null, null);
+					    plus.android.importClass(cursor);
+					    cursor.moveToFirst();
+					    var s_ret;
+					    var givenName = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
+					    s_ret = givenName;
+					    var contactId = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts._ID));
+					    var pCursor = resolver.query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
+					     null, ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = " + contactId,
+					     null, null);
+					    while (pCursor.moveToNext()) {
+						    phoneNumber =  pCursor.getString(pCursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
+					    }
+					    name.value= givenName;
+					    phone.value= phoneNumber;
+					    cursor.close();
+					    pCursor.close();
+					  }
+					};
+					main.startActivityForResult(intent, REQUESTCODE);
+				});
+			});
+			var old_back=mui.back;
+			
+			mui(document).on('tap','.mui-icon-back',function(){
+				mui.confirm("您还没有保存地址,确定要离开该页面~~","友情提示",["是的确定","不没想好"],function(e){
+					if(!e.index){
+						old_back();
+					}
+				});
+			});
+			
+			mui(document).on('tap','#showCityPicker3',function(){
+				obj = this;
+				var cityPicker3 = new mui.PopPicker({
+					layer: 3
+				});
+				cityPicker3.setData(cityData3);
+				cityPicker3.show(function(items) {
+					obj.value =  _getParam(items[0], 'text') + " " + _getParam(items[1], 'text') + " " + _getParam(items[2], 'text');
+				});
+			});
+			var pay = null;
+			mui(document).on('tap','#save-and-used',function(){
+				if(!pay){
+					pay = plus.webview.getWebviewById('pay.html');
+				}
+				mui.fire(pay,"addressId",{id:12});
+				mui.openWindow({
+					id:"pay.html",
+					url:"pay.html"
+					,show:{
+						autoShow:true
+					}
+					,waiting:{
+						autoShow:true,
+						title:'努力加中载...'
+					}
+				})
+			});
+			
+			/**
+			 * 获取对象属性的值
+			 * 主要用于过滤三级联动中，可能出现的最低级的数据不存在的情况，实际开发中需要注意这一点；
+			 * @param {Object} obj 对象
+			 * @param {String} param 属性名
+			 */
+			var _getParam = function(obj, param) {
+				return obj[param] || '';
+			};
+		</script>
+	</body>
+</html>

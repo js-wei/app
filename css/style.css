@@ -1,9 +1,4 @@
 @charset "UTF-8";
-@font-face {
-  font-family: Muiicons;
-  font-weight: 400;
-  font-style: normal;
-  src: url(../fonts/mui.ttf) format("truetype"); }
 html {
   font-size: 75%;
   /*10 梅 16 脳 100% = 62.5%*/ }
@@ -74,7 +69,7 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 99999;
   overflow: hidden;
   display: none;
   background-color: #E8E8E8; }
@@ -213,15 +208,19 @@ header.mui-bar {
       height: 70px;
       line-height: 70px;
       border: none; }
-  .mui-content .categray .mui-list-unstyled li {
-    line-height: 35px;
-    color: #666666; }
-  .mui-content .categray .mui-list-unstyled li.active {
-    color: #000000;
-    font-weight: 600;
-    border-left: 2px solid #e60b4e; }
+  .mui-content .categray {
+    height: 100%;
+    overflow-y: auto; }
+    .mui-content .categray .mui-list-unstyled li {
+      font-size: 1.2rem;
+      line-height: 35px;
+      color: #666666; }
+    .mui-content .categray .mui-list-unstyled li.active {
+      color: #000000;
+      font-weight: 600;
+      border-left: 2px solid #e60b4e; }
   .mui-content .content h3 {
-    font-size: 9rem;
+    font-size: 1.5rem;
     font-weight: 600; }
   .mui-content .content .continer img.activity {
     margin-top: 10px;
@@ -235,6 +234,7 @@ header.mui-bar {
       height: 50px;
       width: 80px; }
     .mui-content .content .continer .list-items h4 {
+      font-size: 1rem;
       color: #666666; }
   .mui-content .mui-continer {
     background-color: #FFFFFF;
@@ -298,6 +298,7 @@ header.mui-bar {
     .mui-content .mui-short-cart-list li {
       height: auto;
       padding-bottom: 10px;
+      overflow: hidden;
       border-bottom: 1px solid #cccccc;
       text-align: center;
       position: relative; }
@@ -308,20 +309,19 @@ header.mui-bar {
           height: 10vh;
           overflow: hidden;
           text-align: left; }
-          .mui-content .mui-short-cart-list li .mui-row .cart .mui-checkbox {
-            height: 10vh;
-            line-height: 10vh; }
-            .mui-content .mui-short-cart-list li .mui-row .cart .mui-checkbox label {
-              display: block;
-              height: 10vh;
-              line-height: 10vh; }
-            .mui-content .mui-short-cart-list li .mui-row .cart .mui-checkbox input[type=checkbox]:before {
-              font-size: 2rem;
-              line-height: 8vh; }
-            .mui-content .mui-short-cart-list li .mui-row .cart .mui-checkbox input[type=checkbox]:checked:before {
-              color: #F52F6C; }
+          .mui-content .mui-short-cart-list li .mui-row .cart .mui-checkbox label {
+            display: block;
+            height: auto;
+            overflow: hidden; }
+          .mui-content .mui-short-cart-list li .mui-row .cart .mui-checkbox input[type=checkbox] {
+            margin-top: 20px; }
+          .mui-content .mui-short-cart-list li .mui-row .cart .mui-checkbox input[type=checkbox]:before {
+            font-size: 2rem;
+            line-height: 2rem; }
+          .mui-content .mui-short-cart-list li .mui-row .cart .mui-checkbox input[type=checkbox]:checked:before {
+            color: #F52F6C; }
           .mui-content .mui-short-cart-list li .mui-row .cart .mui-checkbox.mui-left input[type=checkbox] {
-            left: 0; }
+            left: 5px; }
           .mui-content .mui-short-cart-list li .mui-row .cart img {
             width: 30%;
             float: left;
@@ -423,8 +423,12 @@ header.mui-bar {
       padding: 11px 15px; }
     .mui-content .mui-input-group .mui-input-row input {
       width: 74%; }
+    .mui-content .mui-input-group .mui-input-row input[type="checkbox"] {
+      width: 20px; }
     .mui-content .mui-input-group .mui-input-row input.first ~ .mui-icon-clear {
       right: 70px; }
+    .mui-content .mui-input-group .mui-input-row input[type=checkbox]:checked:before {
+      color: #F52F6C; }
   .mui-content .choose {
     position: absolute;
     width: 70px;
@@ -441,6 +445,142 @@ header.mui-bar {
     .mui-content .choose .text {
       font-size: 1rem;
       display: block; }
+  .mui-content form > div:nth-of-type(3) input[type="text"] {
+    width: 65%;
+    float: left; }
+  .mui-content form > div:nth-of-type(3) span.mui-icon {
+    margin-top: 10px; }
+  .mui-content form > div:nth-of-type(5) {
+    height: 120px; }
+    .mui-content form > div:nth-of-type(5) .mui-btn {
+      float: left;
+      padding: 10px 10px;
+      margin: 10px 10px 0 0; }
+  .mui-content .mui-shop-list {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    .mui-content .mui-shop-list li {
+      height: auto;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #cccccc;
+      overflow: hidden;
+      text-align: center;
+      position: relative; }
+      .mui-content .mui-shop-list li .mui-row {
+        margin-top: 10px; }
+        .mui-content .mui-shop-list li .mui-row .shop {
+          height: auto;
+          overflow: hidden;
+          text-align: left; }
+          .mui-content .mui-shop-list li .mui-row .shop img {
+            width: 40%;
+            float: left;
+            margin-left: 5px; }
+          .mui-content .mui-shop-list li .mui-row .shop .mui-shop-details {
+            width: 55%;
+            float: right;
+            padding-right: 10px; }
+            .mui-content .mui-shop-list li .mui-row .shop .mui-shop-details h4 {
+              font-size: 1.6rem;
+              font-weight: normal;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
+              color: #8f8f94; }
+            .mui-content .mui-shop-list li .mui-row .shop .mui-shop-details p {
+              line-height: 1.2rem;
+              font-size: 1.2rem; }
+            .mui-content .mui-shop-list li .mui-row .shop .mui-shop-details p.price {
+              color: #F52F6C; }
+            .mui-content .mui-shop-list li .mui-row .shop .mui-shop-details button {
+              padding: 2px 4px; }
+    .mui-content .mui-shop-list li:last-of-type {
+      border: none; }
+  .mui-content .shop-details {
+    padding-bottom: 80px;
+    margin: 10px; }
+    .mui-content .shop-details h3 {
+      margin: 15px 0px 15px 0px;
+      font-weight: normal;
+      font-size: 2.2rem; }
+    .mui-content .shop-details div.btn-group {
+      margin: 10px; }
+      .mui-content .shop-details div.btn-group button {
+        padding: 2px 6px; }
+    .mui-content .shop-details p.shop-mark {
+      margin: 0px; }
+      .mui-content .shop-details p.shop-mark span {
+        display: inline-block;
+        width: 49%;
+        text-align: left; }
+      .mui-content .shop-details p.shop-mark span:nth-of-type(2) {
+        text-align: right; }
+    .mui-content .shop-details h1 {
+      margin: 10px 0px 20px 0px;
+      height: 2.5rem;
+      line-height: 2.5rem;
+      font-size: 1.5rem;
+      border-left: 4px solid darkred;
+      padding-left: 6px;
+      color: #8f8f94;
+      font-weight: normal; }
+    .mui-content .shop-details h1:nth-of-type(2) {
+      border-left: 4px solid deeppink; }
+    .mui-content .shop-details ul li {
+      height: 5rem;
+      line-height: 5rem;
+      border-bottom: 1px solid #d0d0d2; }
+      .mui-content .shop-details ul li h6 {
+        display: inline-block;
+        width: 20%;
+        text-align: right;
+        font-size: 1.2rem; }
+      .mui-content .shop-details ul li h6:nth-of-type(2) {
+        width: 60%;
+        text-align: left; }
+      .mui-content .shop-details ul li span.mui-badge {
+        width: 15%;
+        float: right;
+        margin-top: 1.2rem;
+        text-align: center; }
+    .mui-content .shop-details div.content {
+      padding: 0px 10px; }
+      .mui-content .shop-details div.content p {
+        line-height: 1.5em;
+        text-indent: 2em; }
+    .mui-content .shop-details div.warning {
+      background-color: #fff7f9; }
+      .mui-content .shop-details div.warning div h5 {
+        font-size: 1.5rem;
+        margin-left: 10px; }
+      .mui-content .shop-details div.warning div p {
+        margin-left: 10px; }
+      .mui-content .shop-details div.warning div.warm {
+        text-align: center;
+        line-height: 50px; }
+        .mui-content .shop-details div.warning div.warm .fa-warning {
+          color: red;
+          text-align: center; }
+  .mui-content .mui-tool-bar.shop {
+    height: 70px; }
+    .mui-content .mui-tool-bar.shop .mui-row div {
+      height: 70px;
+      line-height: 70px;
+      text-align: center;
+      border-right: 1px solid #8f8f94; }
+      .mui-content .mui-tool-bar.shop .mui-row div span {
+        display: block;
+        width: 100%;
+        height: 40px;
+        left: 0px;
+        top: 7px; }
+      .mui-content .mui-tool-bar.shop .mui-row div h3 {
+        display: block;
+        margin-top: 40px;
+        font-weight: normal; }
+    .mui-content .mui-tool-bar.shop .mui-row div:nth-of-type(2) {
+      border: none; }
 
 @media screen and (min-width: 760px) {
   html {

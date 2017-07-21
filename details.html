@@ -238,7 +238,12 @@
 		<script src="js/mui.previewimage.js"></script>
 		<script type="text/javascript">
 		    $(function(){
-		    	mui.init();
+		    	mui.init({
+		    		preloadPages:[{
+		    			id:'short_cart.html',
+		    			url:'short_cart.html'
+		    		}]
+		    	});
 				var title = $('#title').text();
 				$(window).scroll(function () {
 					if($(window).scrollTop()>50){
@@ -253,6 +258,13 @@
 		    		mui.openWindow({
 		    			id:'short_cart.html',
 		    			url:'short_cart.html'
+		    			,show:{
+							autoShow:true
+						}
+						,waiting:{
+							autoShow:true,
+							title:'努力加中载...'
+						}
 		    		});
 		    	});
 		    });

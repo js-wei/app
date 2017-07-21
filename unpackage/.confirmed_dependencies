@@ -1,265 +1,390 @@
 {
-  "main.html": {
-    "refer": [
-      "setting.html"
-    ],
-    "resources": []
-  },
-  "login.html": {
-    "resources": [
-      "js/app.js",
-      "js/mui.min.js",
-      "images/sinaweibo.png",
-      "css/mui.min.css",
-      "css/style.css",
-      "images/weixin.png",
-      "images/qq.png",
-      "js/mui.enterfocus.js"
-    ],
-    "refer": [
-      "main.html",
-      "reg.html"
-    ]
-  },
-  "setting.html": {
-    "resources": [
-      "libs/easymob-webim-sdk/easemob.im-1.0.5.js",
-      "fonts/mui.ttf",
-      "libs/easymob-webim-sdk/json2.js",
-      "libs/easymob-webim-sdk/jquery-1.11.1.js",
-      "js/mui.locker.js",
-      "js/feedback.js",
-      "css/feedback-page.css",
-      "js/feedback-page.js",
-      "libs/easymob-webim-sdk/strophe-custom-2.0.0.js",
-      "js/mui.view.js"
-    ],
-    "refer": []
-  },
-  "tab-webview-main.html": {
-    "resources": [
-      "tab-webview-subpage-about.html",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css",
-      "fonts/mui-icons-extra.ttf",
-      "css/icons-extra.css",
-      "css/style.css",
-      "css/font-awesome.min.css"
-    ],
-    "refer": [
-      "tab-webview-subpage-about.html",
-      "tab-webview-subpage-setting.html",
-      "tab-webview-subpage-chat.html",
-      "tab-webview-subpage-contact.html",
-      "categray.html",
-      "barcode.html"
-    ]
-  },
-  "tab-webview-subpage-contact.html": {
-    "resources": [
-      "js/mui.min.js",
-      "css/mui.min.css"
-    ],
-    "refer": []
-  },
-  "tab-webview-subpage-about.html": {
-    "resources": [
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "fonts/mui.ttf",
-      "images/logo.jpg",
-      "css/style.css",
-      "images/4.jpg",
-      "images/2.jpg",
-      "images/1.jpg",
-      "images/3.jpg"
-    ],
-    "refer": []
-  },
-  "status.html": {
-    "resources": [
-      "js/mui.min.js",
-      "css/mui.min.css"
-    ],
-    "refer": []
-  },
-  "tab-webview-subpage-chat.html": {
-    "resources": [
-      "js/mui.min.js",
-      "fonts/mui.ttf"
-    ],
-    "refer": []
-  },
-  "tab-webview-subpage-setting.html": {
-    "resources": [
-      "fonts/mui.ttf",
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "js/app.js",
-      "libs/easymob-webim-sdk/easemob.im-1.0.5.js",
-      "libs/easymob-webim-sdk/json2.js",
-      "libs/easymob-webim-sdk/jquery-1.11.1.js",
-      "js/mui.locker.js",
-      "js/feedback.js",
-      "css/feedback-page.css",
-      "js/feedback-page.js",
-      "libs/easymob-webim-sdk/strophe-custom-2.0.0.js",
-      "js/mui.view.js",
-      "images/iconfont-tianjia.png",
-      "css/style.css"
-    ],
-    "refer": []
-  },
-  "categray.html": {
-    "resources": [
-      "js/mui.min.js",
-      "images/5.jpg",
-      "js/jquery-2.0.3.min.js",
-      "js/bootstrap.min.js",
-      "images/6.jpg",
-      "css/bootstrap.min.css",
-      "fonts/mui.ttf",
-      "css/mui.min.css",
-      "css/style.css",
-      "js/categray.js",
-      "images/cbd.jpg",
-      "categray_sub.html",
-      "images/7.jpg",
-      "js/jquery-3.2.1.min.js",
-      "categray_list.html"
-    ],
-    "refer": [
-      "categray_list.html"
-    ]
-  },
-  "barcode.html": {
-    "resources": [
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "css/style.css"
-    ],
-    "refer": []
-  },
-  "categray_list.html": {
-    "resources": [
-      "pullrefresh_sub.html",
-      "js/mui.picker.js",
-      "js/mui.poppicker.js",
-      "js/city.data.js",
-      "css/mui.poppicker.css",
-      "css/mui.picker.css",
-      "js/city.data-3.js",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css",
-      "css/style.css",
-      "css/icons-extra.css",
-      "js/jquery-3.2.1.min.js"
-    ],
-    "refer": [
-      "pullrefresh_sub.html",
-      "categray.html",
-      "tab-webview-main.html"
-    ]
-  },
-  "pullrefresh_sub.html": {
-    "resources": [
-      "images/cbd.jpg",
-      "images/yuantiao.jpg",
-      "images/muwu.jpg",
-      "images/shuijiao.jpg",
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "fonts/mui.ttf",
-      "css/mui.poppicker.css",
-      "js/mui.picker.js",
-      "js/mui.poppicker.js",
-      "js/city.data.js",
-      "js/city.data-3.js",
-      "css/style.css",
-      "css/icons-extra.css",
-      "css/mui.picker.css",
-      "js/jquery-3.2.1.min.js",
-      "fonts/fontawesome-webfont.ttf",
-      "css/font-awesome.min.css"
-    ],
-    "refer": [
-      "details.html"
-    ]
-  },
-  "picker.html": {
-    "resources": [
-      "js/mui.picker.js",
-      "js/mui.min.js",
-      "js/mui.poppicker.js",
-      "js/city.data.js",
-      "css/mui.poppicker.css",
-      "css/mui.picker.css",
-      "js/city.data-3.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css"
-    ],
-    "refer": []
-  },
-  "details.html": {
-    "resources": [
-      "js/mui.zoom.js",
-      "js/mui.min.js",
-      "js/mui.previewimage.js",
-      "fonts/fontawesome-webfont.ttf",
-      "images/shuijiao.jpg",
-      "fonts/mui-icons-extra.ttf",
-      "fonts/mui.ttf",
-      "images/1.jpg",
-      "css/font-awesome.min.css",
-      "css/mui.min.css",
-      "css/style.css",
-      "js/jquery-3.2.1.min.js",
-      "css/icons-extra.css"
-    ],
-    "refer": [
-      "short_cart.html"
-    ]
-  },
-  "short_cart.html": {
-    "resources": [
-      "fonts/mui.ttf",
-      "css/font-awesome.min.css",
-      "css/mui.min.css",
-      "css/style.css",
-      "fonts/fontawesome-webfont.ttf",
-      "css/icons-extra.css",
-      "images/4.jpg",
-      "js/mui.js",
-      "js/mui.min.js"
-    ],
-    "refer": [
-      "pay.html"
-    ]
-  },
-  "location.html": {
-    "resources": [
-      "js/mui.min.js"
-    ],
-    "refer": [
-      "add_location.html"
-    ]
-  },
-  "add_location.html": {
-    "resources": [
-      "js/mui.min.js",
-      "fonts/mui-icons-extra.ttf",
-      "fonts/mui.ttf",
-      "css/font-awesome.min.css",
-      "css/mui.min.css",
-      "css/style.css",
-      "css/icons-extra.css"
-    ]
-  },
-  "pay.html": {
-    "refer": [
-      "location.html"
-    ]
-  }
+	"main.html": {
+		"refer": [
+			"setting.html"
+		],
+		"resources": []
+	},
+	"login.html": {
+		"resources": [
+			"js/app.js",
+			"js/mui.min.js",
+			"images/sinaweibo.png",
+			"css/mui.min.css",
+			"css/style.css",
+			"images/weixin.png",
+			"images/qq.png",
+			"js/mui.enterfocus.js"
+		],
+		"refer": [
+			"main.html",
+			"reg.html"
+		]
+	},
+	"setting.html": {
+		"resources": [
+			"libs/easymob-webim-sdk/easemob.im-1.0.5.js",
+			"fonts/mui.ttf",
+			"libs/easymob-webim-sdk/json2.js",
+			"libs/easymob-webim-sdk/jquery-1.11.1.js",
+			"js/mui.locker.js",
+			"js/feedback.js",
+			"css/feedback-page.css",
+			"js/feedback-page.js",
+			"libs/easymob-webim-sdk/strophe-custom-2.0.0.js",
+			"js/mui.view.js"
+		],
+		"refer": []
+	},
+	"tab-webview-main.html": {
+		"resources": [
+			"tab-webview-subpage-about.html",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"fonts/mui-icons-extra.ttf",
+			"css/icons-extra.css",
+			"css/style.css",
+			"css/font-awesome.min.css",
+			"tab-webview-subpage-cart.html",
+			"tab-webview-subpage-find.html",
+			"tab-webview-subpage-setting.html",
+			"tab-webview-subpage-chat.html"
+		],
+		"refer": [
+			"tab-webview-subpage-about.html",
+			"tab-webview-subpage-setting.html",
+			"tab-webview-subpage-chat.html",
+			"tab-webview-subpage-contact.html",
+			"categray.html",
+			"barcode.html",
+			"tab-webview-subpage-find.html",
+			"tab-webview-subpage-cart.html"
+		]
+	},
+	"tab-webview-subpage-contact.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": []
+	},
+	"tab-webview-subpage-about.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"fonts/mui.ttf",
+			"images/logo.jpg",
+			"css/style.css",
+			"images/4.jpg",
+			"images/2.jpg",
+			"images/1.jpg",
+			"images/3.jpg"
+		],
+		"refer": []
+	},
+	"status.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": []
+	},
+	"tab-webview-subpage-chat.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/style.css",
+			"images/cbd.jpg",
+			"js/jquery-3.2.1.min.js",
+			"js/city.data-3.js",
+			"js/mui.js",
+			"images/4.jpg",
+			"fonts/fontawesome-webfont.ttf",
+			"css/font-awesome.min.css",
+			"fonts/fontawesome-webfont.woff",
+			"shop_detail.html"
+		],
+		"refer": [
+			"shop_detail.html"
+		]
+	},
+	"tab-webview-subpage-setting.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/app.js",
+			"libs/easymob-webim-sdk/easemob.im-1.0.5.js",
+			"libs/easymob-webim-sdk/json2.js",
+			"libs/easymob-webim-sdk/jquery-1.11.1.js",
+			"js/mui.locker.js",
+			"js/feedback.js",
+			"css/feedback-page.css",
+			"js/feedback-page.js",
+			"libs/easymob-webim-sdk/strophe-custom-2.0.0.js",
+			"js/mui.view.js",
+			"images/iconfont-tianjia.png",
+			"css/style.css"
+		],
+		"refer": []
+	},
+	"categray.html": {
+		"resources": [
+			"js/mui.min.js",
+			"images/5.jpg",
+			"js/jquery-2.0.3.min.js",
+			"js/bootstrap.min.js",
+			"images/6.jpg",
+			"css/bootstrap.min.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/style.css",
+			"js/categray.js",
+			"images/cbd.jpg",
+			"categray_sub.html",
+			"images/7.jpg",
+			"js/jquery-3.2.1.min.js",
+			"categray_list.html"
+		],
+		"refer": [
+			"categray_list.html",
+			"categray_sub.html"
+		]
+	},
+	"barcode.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/style.css",
+			"js/common.js",
+			"js/mui.js"
+		],
+		"refer": []
+	},
+	"categray_list.html": {
+		"resources": [
+			"pullrefresh_sub.html",
+			"js/mui.picker.js",
+			"js/mui.poppicker.js",
+			"js/city.data.js",
+			"css/mui.poppicker.css",
+			"css/mui.picker.css",
+			"js/city.data-3.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/style.css",
+			"css/icons-extra.css",
+			"js/jquery-3.2.1.min.js",
+			"js/app.js"
+		],
+		"refer": [
+			"pullrefresh_sub.html",
+			"categray.html",
+			"tab-webview-main.html"
+		]
+	},
+	"pullrefresh_sub.html": {
+		"resources": [
+			"images/cbd.jpg",
+			"images/yuantiao.jpg",
+			"images/muwu.jpg",
+			"images/shuijiao.jpg",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"fonts/mui.ttf",
+			"css/mui.poppicker.css",
+			"js/mui.picker.js",
+			"js/mui.poppicker.js",
+			"js/city.data.js",
+			"js/city.data-3.js",
+			"css/style.css",
+			"css/icons-extra.css",
+			"css/mui.picker.css",
+			"js/jquery-3.2.1.min.js",
+			"fonts/fontawesome-webfont.ttf",
+			"css/font-awesome.min.css",
+			"fonts/fontawesome-webfont.woff"
+		],
+		"refer": [
+			"details.html"
+		]
+	},
+	"picker.html": {
+		"resources": [
+			"js/mui.picker.js",
+			"js/mui.min.js",
+			"js/mui.poppicker.js",
+			"js/city.data.js",
+			"css/mui.poppicker.css",
+			"css/mui.picker.css",
+			"js/city.data-3.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		],
+		"refer": []
+	},
+	"details.html": {
+		"resources": [
+			"js/mui.zoom.js",
+			"js/mui.min.js",
+			"js/mui.previewimage.js",
+			"fonts/fontawesome-webfont.ttf",
+			"images/shuijiao.jpg",
+			"fonts/mui-icons-extra.ttf",
+			"fonts/mui.ttf",
+			"images/1.jpg",
+			"css/font-awesome.min.css",
+			"css/mui.min.css",
+			"css/style.css",
+			"js/jquery-3.2.1.min.js",
+			"css/icons-extra.css"
+		],
+		"refer": [
+			"short_cart.html"
+		]
+	},
+	"short_cart.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"css/font-awesome.min.css",
+			"css/mui.min.css",
+			"css/style.css",
+			"fonts/fontawesome-webfont.ttf",
+			"css/icons-extra.css",
+			"images/4.jpg",
+			"js/mui.js",
+			"js/mui.min.js",
+			"fonts/mui-icons-extra.ttf",
+			"fonts/fontawesome-webfont.woff"
+		],
+		"refer": [
+			"pay.html"
+		]
+	},
+	"location.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/font-awesome.min.css",
+			"css/mui.min.css",
+			"css/style.css",
+			"css/icons-extra.css"
+		],
+		"refer": [
+			"add_location.html"
+		]
+	},
+	"add_location.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui-icons-extra.ttf",
+			"fonts/mui.ttf",
+			"css/font-awesome.min.css",
+			"css/mui.min.css",
+			"css/style.css",
+			"css/icons-extra.css",
+			"css/mui.picker.min.css",
+			"css/mui.poppicker.css",
+			"js/mui.picker.js",
+			"js/mui.poppicker.js",
+			"js/city.data-3.js"
+		]
+	},
+	"pay.html": {
+		"refer": [
+			"location.html",
+			"address.html"
+		],
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/font-awesome.min.css",
+			"css/mui.min.css",
+			"css/style.css",
+			"fonts/fontawesome-webfont.ttf",
+			"css/icons-extra.css",
+			"images/4.jpg",
+			"js/app.js",
+			"fonts/fontawesome-webfont.woff"
+		]
+	},
+	"address.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/font-awesome.min.css",
+			"css/mui.min.css",
+			"css/style.css",
+			"css/icons-extra.css"
+		],
+		"refer": [
+			"add_address.html"
+		]
+	},
+	"add_address.html": {
+		"resources": [
+			"fonts/mui-icons-extra.ttf",
+			"js/mui.picker.js",
+			"js/mui.min.js",
+			"js/mui.poppicker.js",
+			"css/mui.picker.min.css",
+			"js/city.data-3.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/style.css",
+			"css/mui.poppicker.css",
+			"css/icons-extra.css"
+		]
+	},
+	"categray_sub.html": {
+		"resources": [
+			"js/mui.min.js",
+			"js/jquery-3.2.1.min.js",
+			"images/cbd.jpg",
+			"css/mui.min.css",
+			"css/style.css",
+			"images/7.jpg"
+		],
+		"refer": [
+			"categray_list.html"
+		]
+	},
+	"tab-webview-subpage-cart.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"fonts/mui.ttf",
+			"images/4.jpg",
+			"css/style.css"
+		],
+		"refer": [
+			"pay.html"
+		]
+	},
+	"tab-webview-subpage-find.html": {
+		"resources": [
+			"js/mui.min.js"
+		]
+	},
+	"shop_detail.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui-icons-extra.ttf",
+			"images/2.jpg",
+			"fonts/mui.ttf",
+			"images/1.jpg",
+			"css/font-awesome.min.css",
+			"css/mui.min.css",
+			"css/style.css",
+			"fonts/fontawesome-webfont.ttf",
+			"images/3.jpg",
+			"css/icons-extra.css",
+			"images/4.jpg",
+			"js/app.js",
+			"fonts/fontawesome-webfont.woff"
+		]
+	}
 }

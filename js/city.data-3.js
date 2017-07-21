@@ -11,12 +11,6 @@ var cityData3 = [{
 			value: "110102",
 			text: "西城区"
 		}, {
-			value: "110103",
-			text: "崇文区"
-		}, {
-			value: "110104",
-			text: "宣武区"
-		}, {
 			value: "110105",
 			text: "朝阳区"
 		}, {
@@ -54,10 +48,10 @@ var cityData3 = [{
 			text: "平谷区"
 		}, {
 			value: "110228",
-			text: "密云县"
+			text: "密云区"
 		}, {
 			value: "110229",
-			text: "延庆县"
+			text: "延庆区"
 		}, {
 			value: "110230",
 			text: "其它区"
@@ -88,15 +82,6 @@ var cityData3 = [{
 			value: "120106",
 			text: "红桥区"
 		}, {
-			value: "120107",
-			text: "塘沽区"
-		}, {
-			value: "120108",
-			text: "汉沽区"
-		}, {
-			value: "120109",
-			text: "大港区"
-		}, {
 			value: "120110",
 			text: "东丽区"
 		}, {
@@ -119,13 +104,13 @@ var cityData3 = [{
 			text: "滨海新区"
 		}, {
 			value: "120221",
-			text: "宁河县"
+			text: "宁河区"
 		}, {
 			value: "120223",
-			text: "静海县"
+			text: "静海区"
 		}, {
 			value: "120225",
-			text: "蓟县"
+			text: "蓟州区"
 		}, {
 			value: "120226",
 			text: "其它区"
@@ -156,14 +141,20 @@ var cityData3 = [{
 			value: "130108",
 			text: "裕华区"
 		}, {
+			value: "130124",
+			text: "栾城区"
+		}, {
+			value: "130182",
+			text: "藁城区"
+		}, {
+			value: "130185",
+			text: "鹿泉区"
+		}, {
 			value: "130121",
 			text: "井陉县"
 		}, {
 			value: "130123",
 			text: "正定县"
-		}, {
-			value: "130124",
-			text: "栾城县"
 		}, {
 			value: "130125",
 			text: "行唐县"
@@ -195,17 +186,11 @@ var cityData3 = [{
 			value: "130181",
 			text: "辛集市"
 		}, {
-			value: "130182",
-			text: "藁城市"
-		}, {
 			value: "130183",
 			text: "晋州市"
 		}, {
 			value: "130184",
 			text: "新乐市"
-		}, {
-			value: "130185",
-			text: "鹿泉市"
 		}, {
 			value: "130186",
 			text: "其它区"
@@ -272,14 +257,14 @@ var cityData3 = [{
 			value: "130304",
 			text: "北戴河区"
 		}, {
+			value: "130323",
+			text: "抚宁区"
+		}, {
 			value: "130321",
 			text: "青龙满族自治县"
 		}, {
 			value: "130322",
 			text: "昌黎县"
-		}, {
-			value: "130323",
-			text: "抚宁县"
 		}, {
 			value: "130324",
 			text: "卢龙县"
@@ -306,6 +291,12 @@ var cityData3 = [{
 			value: "130406",
 			text: "峰峰矿区"
 		}, {
+			value: "130428",
+			text: "肥乡区"
+		}, {
+			value: "130429",
+			text: "永年区"
+		}, {
 			value: "130421",
 			text: "邯郸县"
 		}, {
@@ -323,12 +314,6 @@ var cityData3 = [{
 		}, {
 			value: "130427",
 			text: "磁县"
-		}, {
-			value: "130428",
-			text: "肥乡县"
-		}, {
-			value: "130429",
-			text: "永年县"
 		}, {
 			value: "130430",
 			text: "邱县"
@@ -423,28 +408,25 @@ var cityData3 = [{
 		text: "保定市",
 		children: [{
 			value: "130602",
-			text: "新市区"
+			text: "竞秀区(新市区)"
 		}, {
 			value: "130603",
-			text: "北市区"
-		}, {
-			value: "130604",
-			text: "南市区"
+			text: "莲池区"
 		}, {
 			value: "130621",
-			text: "满城县"
+			text: "满城区"
 		}, {
 			value: "130622",
-			text: "清苑县"
+			text: "清苑区"
+		}, {
+			value: "130625",
+			text: "徐水区"
 		}, {
 			value: "130623",
 			text: "涞水县"
 		}, {
 			value: "130624",
 			text: "阜平县"
-		}, {
-			value: "130625",
-			text: "徐水县"
 		}, {
 			value: "130626",
 			text: "定兴县"
@@ -519,8 +501,11 @@ var cityData3 = [{
 			value: "130706",
 			text: "下花园区"
 		}, {
-			value: "130721",
-			text: "宣化县"
+			value: "130733",
+			text: "崇礼区"
+		}, {
+			value: "130729",
+			text: "万全区"
 		}, {
 			value: "130722",
 			text: "张北县"
@@ -543,9 +528,6 @@ var cityData3 = [{
 			value: "130728",
 			text: "怀安县"
 		}, {
-			value: "130729",
-			text: "万全县"
-		}, {
 			value: "130730",
 			text: "怀来县"
 		}, {
@@ -554,9 +536,6 @@ var cityData3 = [{
 		}, {
 			value: "130732",
 			text: "赤城县"
-		}, {
-			value: "130733",
-			text: "崇礼县"
 		}, {
 			value: "130734",
 			text: "其它区"
@@ -581,7 +560,7 @@ var cityData3 = [{
 			text: "兴隆县"
 		}, {
 			value: "130823",
-			text: "平泉县"
+			text: "平泉市"
 		}, {
 			value: "130824",
 			text: "滦平县"
@@ -706,6 +685,9 @@ var cityData3 = [{
 			value: "131102",
 			text: "桃城区"
 		}, {
+			value: "131181",
+			text: "冀州区"
+		}, {
 			value: "131121",
 			text: "枣强县"
 		}, {
@@ -729,9 +711,6 @@ var cityData3 = [{
 		}, {
 			value: "131128",
 			text: "阜城县"
-		}, {
-			value: "131181",
-			text: "冀州市"
 		}, {
 			value: "131182",
 			text: "深州市"
@@ -845,7 +824,13 @@ var cityData3 = [{
 	}, {
 		value: "140400",
 		text: "长治市",
-		children: [{
+		children: [ {
+			value: "140482",
+			text: "城区"
+		}, {
+			value: "140483",
+			text: "郊区"
+		},{
 			value: "140421",
 			text: "长治县"
 		}, {
@@ -878,12 +863,6 @@ var cityData3 = [{
 		}, {
 			value: "140481",
 			text: "潞城市"
-		}, {
-			value: "140482",
-			text: "城区"
-		}, {
-			value: "140483",
-			text: "郊区"
 		}, {
 			value: "140484",
 			text: "高新区"
@@ -11533,16 +11512,28 @@ var cityData3 = [{
 	text: '澳门',
 	children: [{
 		value: "820100",
-		text: "澳门半岛"
+		text: "澳门半岛",
+		children:[{
+			value: "820100",
+			text: "澳门半岛"
+		}]
 	}, {
 		value: "820200",
-		text: "离岛"
+		text: "离岛",
+		children:[{
+			value: "820200",
+			text: "离岛"
+		}]
 	}]
 }, {
 	value: '990000',
 	text: '海外',
 	children: [{
 		value: "990100",
-		text: "海外"
+		text: "海外",
+		children:[{
+			value: "990100",
+			text: "海外"
+		}]
 	}]
 }]

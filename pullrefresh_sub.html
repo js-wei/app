@@ -7,12 +7,10 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<link rel="stylesheet" href="css/mui.min.css">
-		<link rel="stylesheet" type="text/css" href="css/icons-extra.css"/>
-		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 	</head>
 	<body>
-		<div id="filter">
+		<div id="filter" style="top:70px;">
 			<div class="mui-row">
 			    <div class="mui-col-sm-4 mui-col-xs-4 mui-filter-continer">
 			    	<ul id="provice">
@@ -30,116 +28,129 @@
 			    </div>
 			</div>
 		</div>
-		<!--<div  style="width:100%; height:220px; position: absolute;top: 0;left: 0;z-index: 100;overflow: hidden;display:block;background-color:#E8E8E8;">
-			<div class="mui-row">
-			    <div class="mui-col-sm-12 mui-col-xs-12 mui-text-center">
-			    	
+		<div class="mui-content">
+			<div class="mui-row filter">
+			    <div class="mui-col-sm-4 mui-col-xs-4 mui-text-center" id="showCityPicker3">
+			    	<div>
+			    		<span id="cityResult3">区域</span>
+			    		<span class="mui-icon mui-icon-arrowdown"></span>
+			    	</div>
+			    </div>
+			    <div class="mui-col-sm-4 mui-col-xs-4 mui-text-center">
+			    	<div id="showCityPicker2">
+			    		<span id="Result2">价格</span>
+			    		<span class="mui-icon mui-icon-arrowdown"></span>
+			    	</div>
+			    </div>
+			    <div class="mui-col-sm-4 mui-col-xs-4 mui-text-center">
+			    	<div id="sortPicker">
+			    		<span id="Result1">排序</span>
+			    		<span class="mui-icon mui-icon-arrowdown"></span>
+			    	</div>
 			    </div>
 			</div>
-		</div>-->
+		</div>
 		<!--下拉刷新容器-->
 		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
 			<div class="mui-scroll">
 				<!--数据列表-->
 				<ul class="mui-table-view mui-grid-view">
-			        <!--<li class="mui-table-view-cell mui-media mui-col-xs-6">
-			            <a href="details.html">
-			               	<img class="mui-media-object" src="images/shuijiao.jpg">
-			                <div class="mui-media-body">幸福就是可以一起睡觉</div>
-			            </a>
-			        </li> -->
+			        
 			    </ul>   
 			</div>
 		</div> 
-		<script src="js/mui.min.js"></script>
 		<script src="js/jquery-3.2.1.min.js"></script>
 		<script src="js/city.data-3.js"></script>
+		<script src="js/mui.min.js"></script>
 		<script>
 			mui.init({
 				pullRefresh: {
 					container: '#pullrefresh',
-					down: {
-						callback: pulldownRefresh
+					down:{
+						height:50,
+						auto:false,
+						contentdown:"下拉可以刷新",
+						contentover:"释放立即刷新",
+						contentrefresh:"正在刷新...",
+						callback:function(){
+							mui('#pullrefresh').pullRefresh().endPulldownToRefresh(true);
+						}
 					},
-					up: {
-						contentrefresh: '正在加载...',
-						callback: pullupRefresh
+					up:{
+						height:50,
+						auto:false,
+					    contentrefresh : "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容
+					    contentnomore:'没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容；
+					    callback: pullupRefresh
 					}
 				}
 			});
-			/**
-			 * 下拉刷新具体业务实现
-			 */
-			function pulldownRefresh() {
-				setTimeout(function() {
-					var table = document.body.querySelector('.mui-table-view');
-					var cells = document.body.querySelectorAll('.mui-table-view-cell');
-					for (var i = cells.length, len = i + 3; i < len; i++) {
-						var li = document.createElement('li');
-						li.className = 'mui-table-view-cell mui-col-xs-6';
-						li.innerHTML = '<a href="#"><img class="mui-media-object" src="images/yuantiao.jpg"><div class="mui-media-body"></div></a>';
-						//下拉刷新，新纪录插到最前面；
-						//table.insertBefore(li, table.firstChild);
-					}
-					mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
-				}, 200);
-			}
-			var count = 0;
+			
+			var contentWebview = null,
+				subWebview=null,
+				tab=null,
+				count = 0;
+			
 			/**
 			 * 上拉加载具体业务实现
 			 */
 			function pullupRefresh() {
-				setTimeout(function() {
-					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
-					var table = document.body.querySelector('.mui-table-view');
-					var cells = document.body.querySelectorAll('.mui-table-view-cell');
-					for (var i = cells.length, len = i + 20; i < len; i++) {
-						var li = document.createElement('li');
-						li.className = 'mui-table-view-cell mui-col-xs-6';
-						li.innerHTML = '<a href="details.html" class="mui-category-list">'
-							+'<img class="mui-media-object" src="images/yuantiao.jpg">'
-							+'<div class="mui-media-body">'
-							+'<h4 class="title">静静看这世界</h4>'
-							+'<p class="price"><i class="fa fa-cny"></i>99.00</p>'
-							+'<p class="location"><i class="fa fa-map-marker"></i>北京市昌平区北七家镇</p>'
-							+'</div>'
-							+'</a>';
-						table.appendChild(li);
-					}
-				}, 200);
+				mui.ready(function(){
+					setTimeout(function() {
+						mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+						var table = document.body.querySelector('.mui-table-view');
+						var cells = document.body.querySelectorAll('.mui-table-view-cell');
+						for (var i = cells.length, len = i + 20; i < len; i++) {
+							var li = document.createElement('li');
+							li.className = 'mui-table-view-cell mui-col-xs-6';
+							li.innerHTML = '<a href="details.html" class="mui-category-list">'
+								+'<img class="mui-media-object" src="images/yuantiao.jpg">'
+								+'<div class="mui-media-body">'
+								+'<h4 class="title">静静看这世界</h4>'
+								+'<p class="price"><i class="fa fa-cny"></i>99.00</p>'
+								+'<p class="location"><i class="fa fa-map-marker"></i>北京市昌平区北七家镇</p>'
+								+'</div>'
+								+'</a>';
+							table.appendChild(li);
+						}
+					},500);
+				})
 			}
 			if (mui.os.plus) {
-				mui.plusReady(function() {
+				mui.ready(function() {
 					setTimeout(function() {
 						mui('#pullrefresh').pullRefresh().pullupLoading();
-					}, 1000);
+					},500);
 				});
 			} else {
 				mui.ready(function() {
-					mui('#pullrefresh').pullRefresh().pullupLoading();
+					setTimeout(function() {
+						mui('#pullrefresh').pullRefresh().pullupLoading();
+					},500);
 				});
 			}
 			
 			mui.ready(function() {
-				mui(document).on('tap','a',function(e){
-					e.preventDefault();
-					var id = this.href;
-					mui.openWindow({
-						id:id,
-						url:id
-					});
+				//省
+				var provice = document.body.querySelector('#provice');
+				for (var i=-1;i<cityData3.length;i++) {
+					var li = document.createElement('li');
+					if(i==-1){
+						li.innerHTML="<span class=\"mui-icon mui-icon-location\"></span>定位";
+						li.setAttribute('data-id','-1');
+					}else{
+						li.setAttribute('data-id',cityData3[i].value);
+						li.innerHTML=cityData3[i].text;
+					};
+					provice.appendChild(li);
+				}
+				
+				$(document).on('click','#showCityPicker3',function(){
+					$('#filter').toggle();
 				});
 				$(document).on('click','.mui-filter-continer li',function(){
 					$(this).addClass('active').siblings().removeClass('active');
 				});
-				//省
-				var provice = document.body.querySelector('#provice');
-				for (var i=0;i<cityData3.length;i++) {
-					var li = document.createElement('li');
-					li.setAttribute('data-id',cityData3[i].value);
-					li.innerHTML=cityData3[i].text;
-					provice.appendChild(li);
-				}
 				$(document).on('click','#provice li',function(){
 					$('#cities,#areas').empty();
 					var html = '';
@@ -170,16 +181,66 @@
 					$('#areas').html(html);
 					$('#areas').parent().scrollTop(0);
 				});
-			});
-			mui.plusReady(function(){
 				$(document).on('click','#areas li',function(){
-					var parent = plus.webview.getWebviewById('categray_list.html');
 					var value = $(this).attr('data-area');
 					var text = $(this).text();
-					parent.evalJS('document.getElementById("cityResult3").innerHTML="'+text+'";');
 					$('#filter').hide();
 					$('li.active').removeClass('active');
 					$('#cities,#areas').empty();
+					$('#cityResult3').text(text);
+				});
+				mui(document).on('tap','a',function(e){
+					var id = this.href;
+					mui.openWindow({
+						id:id,
+						url:id
+						,show:{
+							autoShow:true
+						}
+						,waiting:{
+							autoShow:true,
+							title:'努力加中载...'
+						}
+					});
+				});
+				var li = document.querySelector('#provice li[data-id="-1"]');
+				li.addEventListener('tap',function(e){
+		            $('#filter').hide();
+					var nwaiting = plus.nativeUI.showWaiting("正在定位,请耐心等待...");  
+					plus.geolocation.getCurrentPosition(function(p){
+						var params={
+		                    ak: 'xooZZG25yNjbmCFGytrRyor0',
+		                    callback: 'renderReverse',
+		                    output: 'json',
+		                    location: p.coords.latitude+","+p.coords.longitude,
+		                    coordtype: p.coordsType+'ll',
+		                    pois:0
+		                };
+	                    mui.ajax("http://api.map.baidu.com/geocoder/v2/", {
+		                    data:params,
+		                    dataType: 'json', //服务器返回json格式数据
+		                    type: 'post', //HTTP请求类型
+		                    timeout: 10000, //超时时间设置为10秒；
+		                    success: function(data) {
+		                    	plus.nativeUI.closeWaiting();
+		                        if (data.status == 0) {
+		                        	data = data.result;
+									$('li.active').removeClass('active');
+									$('#cities,#areas').empty();
+									$('#cityResult3').text(data.addressComponent.district);
+		                        }else{
+		                           mui.alert("定位失败");
+		                        }
+		                    },
+		                    error: function(xhr, type, errorThrown) {
+		                    	plus.nativeUI.closeWaiting();
+		                        mui.alert("定位失败");
+		                    }
+		                });
+					}, function ( e ) {
+						plus.nativeUI.closeWaiting();
+						mui.alert("获取定位位置信息失败："+e.message,"定位提示");
+					},{geocode:true});
 				});
 			});
 		</script>
