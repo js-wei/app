@@ -49,7 +49,8 @@
 			"tab-webview-subpage-cart.html",
 			"tab-webview-subpage-find.html",
 			"tab-webview-subpage-setting.html",
-			"tab-webview-subpage-chat.html"
+			"tab-webview-subpage-chat.html",
+			"comment/tab-webview-subpage-home.html"
 		],
 		"refer": [
 			"tab-webview-subpage-about.html",
@@ -59,7 +60,13 @@
 			"categray.html",
 			"barcode.html",
 			"tab-webview-subpage-find.html",
-			"tab-webview-subpage-cart.html"
+			"tab-webview-subpage-cart.html",
+			"comment/tab-webview-subpage-setting.html",
+			"comment/tab-webview-subpage-find.html",
+			"comment/tab-webview-subpage-home.html",
+			"comment/tab-webview-subpage-chat.html",
+			"comment/tab-webview-subpage-cart.html",
+			"comment/barcode.html"
 		]
 	},
 	"tab-webview-subpage-contact.html": {
@@ -385,6 +392,61 @@
 			"images/4.jpg",
 			"js/app.js",
 			"fonts/fontawesome-webfont.woff"
+		]
+	},
+	"comment/tab-webview-subpage-find.html": {
+		"resources": [
+			"css/mui.min.css",
+			"js/mui.min.js"
+		]
+	},
+	"comment/tab-webview-subpage-cart.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/mui.min.js",
+			"css/style.css"
+		]
+	},
+	"comment/tab-webview-subpage-chat.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"css/font-awesome.min.css",
+			"css/mui.min.css",
+			"fonts/fontawesome-webfont.ttf",
+			"css/style.css",
+			"js/jquery-3.2.1.min.js",
+			"js/mui.js",
+			"js/city.data-3.js"
+		]
+	},
+	"comment/tab-webview-subpage-home.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/style.css"
+		]
+	},
+	"comment/tab-webview-subpage-setting.html": {
+		"resources": [
+			"css/mui.min.css",
+			"css/style.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"js/mui.view.js",
+			"js/app.js",
+			"libs/easymob-webim-sdk/easemob.im-1.0.5.js",
+			"libs/easymob-webim-sdk/json2.js",
+			"libs/easymob-webim-sdk/jquery-1.11.1.js",
+			"js/mui.locker.js",
+			"js/feedback.js",
+			"js/feedback-page.js",
+			"libs/easymob-webim-sdk/strophe-custom-2.0.0.js"
+		]
+	},
+	"comment/barcode.html": {
+		"resources": [
+			"js/common.js"
 		]
 	}
 }
