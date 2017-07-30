@@ -4,10 +4,10 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<link href="css/mui.min.css" rel="stylesheet" />
-		<link rel="stylesheet" href="css/icons-extra.css"/>
-		<link rel="stylesheet" href="css/font-awesome.min.css"/>
-		<link rel="stylesheet" href="css/style.css"/>
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/icons-extra.css"/>
+		<link rel="stylesheet" href="../css/font-awesome.min.css"/>
+		<link rel="stylesheet" href="../css/style.css"/>
 		<style type="text/css">
 			html,body{
 				background-color: #fff;
@@ -175,8 +175,6 @@
 			    	 <h4 id="title">头型详情</h4>
 			    </div>
 			    <div class="mui-col-sm-2 mui-col-xs-2 header-chat mui-text-right">
-			    	<!--<span class="mui-icon mui-icon-extra mui-icon-extra-filter"></span>-->
-			    	<!--<span class="mui-icon mui-icon-home-filled"></span>-->
 			    	<span class="mui-icon mui-icon-extra mui-icon-extra-share"></span>
 			    </div>
 			</div>
@@ -185,7 +183,7 @@
 		    <ul class="mui-table-view">
 				<li class="mui-table-view-cell mui-media">
 					<a href="javascript:;">
-						<img class="mui-media-object circle mui-pull-left" src="images/shuijiao.jpg">
+						<img class="mui-media-object circle mui-pull-left" src="../images/shuijiao.jpg">
 						<div class="mui-media-body">
 							<div class="mui-row">
 								<div class="mui-col-sm-8 mui-col-xs-8">
@@ -206,17 +204,17 @@
 					双井附近，时代国际，主卧，次卧，有要的预定 时代国际，环境美好，交通方便，随时看房该单间,位于时代国际嘉园,1室1厅1卫,普通住宅,豪华装修
 				</p>
 				<p>
-					<img src="images/1.jpg" alt="" />
+					<img src="../images/1.jpg" alt="" />
 				</p>
 				<p>
 					双井附近，时代国际，主卧，次卧，有要的预定 时代国际，环境美好，交通方便，随时看房该单间,位于时代国际嘉园,1室1厅1卫,普通住宅,豪华装修
 				</p>
 				<p>
-					<img src="images/1.jpg" alt="" />
+					<img src="../images/1.jpg" alt="" />
 				</p>
 			</div>
-			<div class="mui-tool-bar mui-text-center">
-				<div class="mui-row">
+			<div class="mui-tool-bar mui-text-center shop">
+				<!--<div class="mui-row">
 					<div class="mui-col-xs-3">
 						<span class="mui-icon mui-icon-extra mui-icon-extra-heart"></span>&nbsp;&nbsp;喜欢
 						
@@ -229,19 +227,38 @@
 						<span class="mui-icon mui-icon-star"></span>&nbsp;&nbsp;&nbsp;收藏
 					</div>
 					<div class="mui-col-xs-3 buy">立即购买</div>
+				</div>-->
+				<div class="mui-row">
+					<div class="mui-col-sm-3 mui-col-xs-3">
+						<span class="fa fa-heart fa-2x"></span>
+						<h3>喜欢</h3>
+					</div>
+					<div class="mui-col-sm-3 mui-col-xs-3">
+						<span class="fa fa-envelope fa-2x"></span>
+						<h3>留言</h3>
+					</div>
+					<div class="mui-col-sm-3 mui-col-xs-3">
+						<span class="fa fa-star fa-2x"></span>
+						<h3>收藏</h3>
+					</div>
+					<div class="mui-col-sm-3 mui-col-xs-3 buy">
+						<span class="fa fa-shopping-cart fa-2x"></span>
+						<h3>立即购买</h3>
+					</div>
 				</div>
+				
 			</div>
 		</div>
-		<script src="js/mui.min.js"></script>
-		<script src="js/jquery-3.2.1.min.js"></script>
-		<script src="js/mui.zoom.js"></script>
-		<script src="js/mui.previewimage.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/jquery-3.2.1.min.js"></script>
+		<script src="../js/mui.zoom.js"></script>
+		<script src="../js/mui.previewimage.js"></script>
 		<script type="text/javascript">
 		    $(function(){
 		    	mui.init({
 		    		preloadPages:[{
 		    			id:'short_cart.html',
-		    			url:'short_cart.html'
+		    			url:'../cart/short_cart.html'
 		    		}]
 		    	});
 				var title = $('#title').text();
@@ -257,7 +274,7 @@
 		    	mui(document).on('tap','.buy',function(){
 		    		mui.openWindow({
 		    			id:'short_cart.html',
-		    			url:'short_cart.html'
+		    			url:'../cart/short_cart.html'
 		    			,show:{
 							autoShow:true
 						}

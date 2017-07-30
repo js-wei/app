@@ -1,1 +1,109 @@
-null
+{
+  "user/add_address.html": {
+    "href": "user/add_address.html",
+    "resources": [],
+    "refer": [
+      "cart/pay.html"
+    ],
+    "priority": 0
+  },
+  "cart/pay.html": {
+    "href": "cart/pay.html",
+    "resources": [
+      "fonts/mui-icons-extra.ttf",
+      "fonts/fontawesome-webfont.eot",
+      "fonts/fontawesome-webfont.woff",
+      "fonts/fontawesome-webfont.svg"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "comment/tab-webview-subpage-find.html": {
+    "href": "comment/tab-webview-subpage-find.html",
+    "resources": [
+      "fonts/mui.ttf"
+    ],
+    "priority": 1
+  },
+  "comment/tab-webview-subpage-home.html": {
+    "href": "comment/tab-webview-subpage-home.html",
+    "resources": [
+      "fonts/mui.ttf"
+    ],
+    "priority": 2
+  },
+  "comment/tab-webview-subpage-setting.html": {
+    "href": "comment/tab-webview-subpage-setting.html",
+    "resources": [
+      "images/logo.png"
+    ],
+    "priority": 3
+  },
+  "product/shop_detail.html": {
+    "href": "product/shop_detail.html",
+    "priority": 4
+  },
+  "comment/tab-webview-subpage-shop.html": {
+    "href": "comment/tab-webview-subpage-shop.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "css/font-awesome.min.css",
+      "fonts/fontawesome-webfont.eot",
+      "fonts/fontawesome-webfont.woff",
+      "fonts/fontawesome-webfont.svg",
+      "css/style.css",
+      "images/4.jpg"
+    ],
+    "refer": [
+      "product/shop_detail.html"
+    ],
+    "priority": 4
+  },
+  "cart/short_cart.html": {
+    "href": "cart/short_cart.html",
+    "resources": [
+      "fonts/fontawesome-webfont.eot",
+      "fonts/fontawesome-webfont.woff",
+      "fonts/fontawesome-webfont.svg"
+    ],
+    "refer": [
+      "cart/pay.html"
+    ],
+    "priority": 6
+  },
+  "product/details.html": {
+    "href": "product/details.html",
+    "resources": [
+      "fonts/fontawesome-webfont.eot",
+      "fonts/fontawesome-webfont.woff",
+      "fonts/fontawesome-webfont.svg"
+    ],
+    "refer": [],
+    "priority": 6
+  },
+  "product/categray_list.html": {
+    "href": "product/categray_list.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/icons-extra.css",
+      "css/style.css"
+    ],
+    "refer": [],
+    "priority": 6
+  },
+  "product/categray_sub.html": {
+    "href": "product/categray_sub.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "css/style.css",
+      "images/cbd.jpg",
+      "images/7.jpg"
+    ],
+    "refer": [
+      "product/categray_list.html"
+    ],
+    "priority": 6
+  }
+}

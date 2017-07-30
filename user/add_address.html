@@ -4,11 +4,11 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<link href="css/mui.min.css" rel="stylesheet" />
-		<link rel="stylesheet" href="css/icons-extra.css"/>
-		<link rel="stylesheet" href="css/mui.picker.min.css"/>
-		<link rel="stylesheet" href="css/mui.poppicker.css"/>
-		<link rel="stylesheet" href="css/style.css"/>
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/icons-extra.css"/>
+		<link rel="stylesheet" href="../css/mui.picker.min.css"/>
+		<link rel="stylesheet" href="../css/mui.poppicker.css"/>
+		<link rel="stylesheet" href="../css/style.css"/>
 		<style type="text/css">
 			html,body{
 				background-color: #fff;
@@ -67,27 +67,29 @@
 		    	<span class="text">选联系人</span>
 		    </div>
 		</div>
-		<script src="js/mui.min.js"></script>
-		<script src="js/mui.picker.js"></script>
-		<script src="js/mui.poppicker.js"></script>
-		<script src="js/city.data-3.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/mui.picker.js"></script>
+		<script src="../js/mui.poppicker.js"></script>
+		<script src="../js/city.data-3.js"></script>
 		<script type="text/javascript">
 			mui.init({
 			  preloadPages:[{
 			    id:'pay.html',
-			    url:'pay.html'           
+			    url:'../cart/pay.html'           
 			  }]
 			});
 			mui.plusReady(function(){
 				var name = document.getElementById("username"),
 				phone= document.getElementById("phone");
 				mui(document).on('tap','.choose',function(e){
+					plus.nativeUI.showWaiting();
 					var REQUESTCODE = 1000;
 					main = plus.android.runtimeMainActivity();
 					var Intent = plus.android.importClass('android.content.Intent');
 					var ContactsContract = plus.android.importClass('android.provider.ContactsContract');
 					var intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
-					main.onActivityResult = function(requestCode, resultCode, data) { 
+					main.onActivityResult = function(requestCode, resultCode, data) {
+					  plus.nativeUI.closeWaiting();
 					  if (REQUESTCODE == requestCode) {
 					    var phoneNumber = null;
 					    var resultString = "";
@@ -144,17 +146,18 @@
 					pay = plus.webview.getWebviewById('pay.html');
 				}
 				mui.fire(pay,"addressId",{id:12});
-				mui.openWindow({
-					id:"pay.html",
-					url:"pay.html"
-					,show:{
-						autoShow:true
-					}
-					,waiting:{
-						autoShow:true,
-						title:'努力加中载...'
-					}
-				})
+				pay.show();
+//				mui.openWindow({
+//					id:"pay.html",
+//					url:"pay.html"
+//					,show:{
+//						autoShow:true
+//					}
+//					,waiting:{
+//						autoShow:true,
+//						title:'努力加中载...'
+//					}
+//				});
 			});
 			
 			/**
